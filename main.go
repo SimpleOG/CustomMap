@@ -16,8 +16,14 @@ import (
 )
 
 func main() {
-	var rtp = flag.Float64("rtp", 0.8, "number for multiplier generation")
+	var rtp = flag.Float64("rtp", 0.4, "number for multiplier generation")
 	flag.Parse()
+	if *rtp > 1 {
+		*rtp = 1
+	}
+	if *rtp < 0 {
+		*rtp = 0
+	}
 	logger, err := logger.NewLogger(0)
 	if err != nil {
 		log.Println("logger wasn't created via error: ", zap.Error(err))
