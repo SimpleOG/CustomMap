@@ -21,7 +21,7 @@ func main() {
 	if *rtp > 1 {
 		*rtp = 1
 	}
-	if *rtp < 0 {
+	if *rtp <= 0 {
 		*rtp = 0.1
 	}
 	logger, err := logger.NewLogger(0)
