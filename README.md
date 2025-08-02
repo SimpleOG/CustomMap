@@ -73,6 +73,7 @@ c := math.Sqrt(float64(A*A + 2*(B-A)*r.config.RptNumber))
 ```
 
 Sigma была выбрана после нескольких тестов, при таком разбросе, значения клиента стремятся к значению rtp сервера
+<img width="370" height="287" alt="image" src="https://github.com/user-attachments/assets/85396d62-0e53-4571-a7c8-9eaf16a00781" />
 
 
 ### В случае если распределение не равномерное
