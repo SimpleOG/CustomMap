@@ -29,7 +29,7 @@ func NewService(config config.Config, logger logger.Logger) Service {
 func (r *rtpService) RandomMultiplier() float64 {
 	r.logger.Info("generating number")
 	//формулу вывел в пояснении
-	c := math.Sqrt(float64(A*A + 2*(B-A)*r.config.RTPNumber))
+	c := math.Sqrt(A*A + 2*(B-A)*r.config.RTPNumber)
 	normal := distuv.Normal{
 		Mu:    c,
 		Sigma: math.Sqrt(c),
